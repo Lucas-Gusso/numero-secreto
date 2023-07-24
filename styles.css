@@ -2,7 +2,42 @@
 
 :root {
     --fonte-family:'Tektur', cursive;
-    --primary-color:#068FFF ;
-    --bg-color:#EEE ;
+    --primary-color:#EEE ;
+    --bg-color:#068FFF ;
     
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    font-family: var(--fonte-family);
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h3 {
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+.mensagem {
+    font-size: 1.5em;
+    margin-top: 2em;
+}
+
+.box {
+    border: 2px solid var(--primary-color);
+    display: inline-block;
+    margin: 0.3em 0;
+    padding: 5px;
+    font-size: 3em;
 }
