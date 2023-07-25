@@ -2,11 +2,17 @@ function verificaValidezDoChute(chute) {
     const numero = +chute;
 
     if(chuteForInvalido(numero)) {
-        console.log('valor invalido')
+        elementoChute.innerHTML += '<div>valor invalido</div>' ;
     }
 
     if (numeroForaDoEscopoPermitido(numero)) {
-        console.log(`valor inválido: o número secreto precisa estar entre ${menorValor} e ${maiorValor} `)
+        elementoChute.innerHTML += `<div>valor inválido: o número secreto precisa estar entre ${menorValor} e ${maiorValor}</div> `
+    }
+
+    if (numero === numeroSecreto) {
+        document.body.innerHTML =
+         `<h1>Você acertou!</h1>
+         <h2>O número secreto era: ${numeroSecreto}</h2>`;
     }
 }
 
@@ -15,5 +21,5 @@ function chuteForInvalido(numero) {
 }
 
 function numeroForaDoEscopoPermitido(numero) {
-    return numero > maiorValor || numero < menorValor
+    return numero > maiorValor || numero < menorValor;
 }
